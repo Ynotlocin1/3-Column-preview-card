@@ -1,0 +1,136 @@
+
+
+*, *::before, *::after {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --brightorange :  hsl(31, 77%, 52%);
+    --darkcyan : hsl(184, 100%, 22%);
+    --verydarkcyan :hsl(179, 100%, 13%);
+
+    --transparentwhitep : hsla(0, 0%, 100%, 0.75);
+    --verylightgraybg :hsl(0, 0%, 95%);
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: var(--verylightgraybg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+
+}
+
+h1 {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 2.65rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+p {
+    line-height: 1.6em;
+    color: var(--transparentwhitep);
+    padding-bottom: 5rem;
+}
+main {
+    display: flex;
+    flex-direction: row;
+}
+.buttons {
+
+
+
+}
+a {
+    text-decoration: none;
+    background-color: white;
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius: 2rem;
+
+
+
+}
+
+
+
+
+.sedans, .suvs, .luxury {
+    padding: 3rem;
+    max-width: 307px;
+    min-height: 500px;
+}
+
+.sedans {
+    background-color: var(--brightorange);
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    
+}
+
+.sedans a {
+    color: var(--brightorange);
+
+}
+
+.suvs {
+    background-color: var(--darkcyan);
+}
+
+.suvs a {
+    color: var(--darkcyan);
+
+}
+
+.luxury {
+    background-color: var(--verydarkcyan);
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.luxury a {
+    color: var(--verydarkcyan);
+
+}
+
+a:hover {
+    background-color: transparent;
+    border: 1px white solid;
+    color: white;
+}
+
+@media screen and (max-width : 800px){
+    body {
+        min-height: 1620px ;
+    }
+    
+    main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sedans, .suvs, .luxury {
+
+        max-height: 440px;
+    }
+
+    .sedans {
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 0rem;
+        border-top-right-radius: 1rem;
+
+        
+    }
+
+    .luxury {
+        border-top-right-radius: 0rem;
+        border-bottom-right-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+
+    }
+}
